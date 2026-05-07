@@ -105,7 +105,7 @@ body{
 /* ================= HERO ================= */
 .hero{
   height:90vh;
-  background:url('../images/school.jpg') center/cover no-repeat;
+ background:url('images/school.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -2483,4 +2483,83 @@ footer{
 
 .academic-approach .btn-primary {
   margin-top: 20px;
+}
+
+/* ================= FIX INDEX ACADEMIC APPROACH SECTION ================= */
+.curriculum-preview {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 25px;
+  text-align: center;
+  background: #f9fafc;
+}
+
+.curriculum-preview h2 {
+  color: #0a1f44;
+  font-size: 32px;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.curriculum-preview p {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.curriculum-preview .btn-primary {
+  display: inline-block;
+  margin-top: 22px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .curriculum-preview {
+    padding: 60px 20px;
+  }
+
+  .curriculum-preview h2 {
+    font-size: 24px;
+  }
+
+  .curriculum-preview p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+/* ================= ACADEMIC APPROACH SECTION FIX ================= */
+.academic-approach {
+  padding: 80px 20px;
+  background: #f9fafc;
+}
+
+.academic-approach .content-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 45px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.academic-approach h2 {
+  color: #0a1f44;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.academic-approach p {
+  max-width: 850px;
+  margin: 0 auto 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.academic-approach .btn-primary {
+  margin-top: 22px;
 }
