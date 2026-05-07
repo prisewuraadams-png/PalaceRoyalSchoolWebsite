@@ -2459,3 +2459,28 @@ footer{
   padding: 15px; /* bigger tap area */
   border-radius: 8px;
 }
+/* ================= ACADEMIC APPROACH FIX ================= */
+.academic-approach {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 25px;
+  text-align: center;
+}
+
+.academic-approach h2 {
+  color: #0a1f44;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.academic-approach p {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 16px;
+}
+
+.academic-approach .btn-primary {
+  margin-top: 20px;
+}

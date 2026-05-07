@@ -336,3 +336,29 @@ function showStaffGroup(groupId, clickedButton) {
   targetGroup.classList.add("active-staff-group");
   clickedButton.classList.add("active");
 }
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function (e) {
+  e.stopPropagation();
+  navLinks.classList.toggle("active");
+});
+
+/* Close menu when clicking anywhere outside */
+document.addEventListener("click", function (e) {
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+  }
+});
+
+/* Close menu when a nav link is clicked */
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
