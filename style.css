@@ -3233,3 +3233,53 @@ li {
         flex-wrap:wrap;
     }
 }
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:white;
+}
+
+.logo-container:hover{
+  opacity:0.95;
+}
+
+.logo-container span{
+  color:white;
+  font-weight:600;
+}
+/* ================= CLICKABLE LOGOS ================= */
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:white;
+  transition:.3s ease;
+}
+
+.logo-container:hover{
+  opacity:.9;
+}
+
+.logo-container span{
+  color:white;
+  font-weight:600;
+}
+
+.nav-logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.nav-logo img{
+  transition:.3s ease;
+}
+
+.nav-logo:hover img{
+  transform:scale(1.05);
+}
