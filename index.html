@@ -6,7 +6,7 @@
   <title>Palace Royal International School</title>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -22,7 +22,7 @@
     </div>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html"class="active">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="admissions.html">Admissions</a></li>
       <li><a href="gallery.html">Gallery</a></li>
@@ -43,12 +43,38 @@
 </header>
 
 <!-- ================= HERO ================= -->
+<!-- ================= HOME HERO ================= -->
 <section class="hero">
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <h1>Locally Grounded, Globally Minded</h1>
-    <p>Knowledge. Excellence. Honour</p>
-    <a href="admissions.html" class="btn-primary">Apply Now</a>
+
+    <span class="hero-tag">
+      Oxford International Curriculum • GES Curriculum
+    </span>
+
+    <h1>
+      Locally Grounded,<br>
+      Globally Minded
+    </h1>
+
+    <p>
+      Raising leaders with excellence, discipline and honour through a world-class education rooted in strong values and global perspectives.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="admissions.html" class="btn-primary">
+        Apply Now
+      </a>
+
+      <a href="curriculum.html" class="hero-outline-btn">
+        Explore Curriculum
+      </a>
+    </div>
+
   </div>
+
 </section>
 
 <!-- ================= NEWS ================= -->
@@ -193,7 +219,7 @@ making it a memorable and engaging experience for everyone involved.</p>
 
 <!-- ================= FOOTER ================= -->
 
-  <footer class="footer">
+<footer class="footer">
   <div class="footer-container">
 
     <p class="footer-text">
@@ -201,24 +227,20 @@ making it a memorable and engaging experience for everyone involved.</p>
     </p>
 
     <div class="social-icons">
-      <a href="https://www.tiktok.com/@palaceroyalintsch?_r=1&_t=ZS-95hRK3zbMGK
-" target="_blank" aria-label="TikTok">
-        <i class="fab fa-tiktok"></i>
-      </a>
-      <a href="https://www.facebook.com/share/1GBpR2aUCd/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/palaceroyalint_school?igsh=MXExd211Zmw5NnFlZA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/palace-royal-international-school-b85800404/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>  
+      <a href="https://www.tiktok.com/@palaceroyalintsch?_r=1&_t=ZS-95hRK3zbMGK" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1GBpR2aUCd/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/palaceroyalint_school?igsh=MXExd211Zmw5NnFlZA%3D%3D&utm_source=qr
+" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/palace-royal-international-school-b85800404/
+
+LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
+
+  </div>
 </footer>
 
-<!-- ================= SCRIPTS ================= -->
-<script src="script.js"></script>
+
+
 
 <!-- ================= WHATSAPP ================= -->
 <a href="https://wa.me/233205669352?text=Hello%20I%20would%20like%20to%20enroll%20my%20child%20at%20Palace%20Royal%20International%20School"
@@ -230,5 +252,44 @@ making it a memorable and engaging experience for everyone involved.</p>
 
 </a>
 
-</body>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+
+<script>
+document.querySelectorAll(".toggle-btn").forEach(button => {
+
+  button.addEventListener("click", function() {
+
+    const currentCard = this.closest(".news-card");
+    const allCards = document.querySelectorAll(".news-card");
+
+    // Close all other cards
+    allCards.forEach(card => {
+
+      if (card !== currentCard) {
+        card.classList.remove("active");
+
+        const otherButton = card.querySelector(".toggle-btn");
+        if (otherButton) {
+          otherButton.textContent = "Show More";
+        }
+      }
+
+    });
+
+    // Toggle current card
+    currentCard.classList.toggle("active");
+
+    // Update button text
+    this.textContent = currentCard.classList.contains("active")
+      ? "Show Less"
+      : "Show More";
+
+  });
+
+});
+</script>
+
+</body> 
 </html>
